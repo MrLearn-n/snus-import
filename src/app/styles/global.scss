@@ -1,0 +1,128 @@
+html {
+  font-size: 18px;
+
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+h1 {
+  line-height: 115%;
+  font-weight: 500;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 120%;
+  font-weight: 500;
+}
+
+span,
+p,
+b,
+strong {
+  line-height: 140%;
+}
+
+strong,
+b {
+  font-weight: 500;
+}
+
+button {
+  color: var(--color-text);
+  background-color: transparent;
+  font-weight: 500;
+  border-radius: 100px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+pre {
+  margin: 0;
+  font-family: inherit;
+  white-space: pre-wrap;
+}
+
+button,
+a {
+  &:active {
+    scale: 0.98 !important;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: $container;
+  margin: 0 auto;
+}
+
+.section {
+  padding-top: 150px;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 48px;
+
+  @media (max-width: $xl) {
+    font-size: 36px;
+  }
+
+  @media (max-width: $xs) {
+    font-size: 32px;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 26px;
+  }
+
+  @media (max-width: $mobile-sm) {
+    font-size: 22px;
+  }
+}
+
+.subtitle {
+  font-size: 24px;
+
+  @media (max-width: $xl) {
+    font-size: 20px;
+  }
+
+  @media (max-width: $xs) {
+    font-size: 18px;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 15px;
+  }
+
+  @media (max-width: $mobile-sm) {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: $container) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    &:not(:first-of-type) {
+      padding-top: 100px;
+    }
+  }
+}

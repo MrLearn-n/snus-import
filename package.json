@@ -1,0 +1,34 @@
+{
+  "name": "template-next",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "biome check",
+    "format": "biome format --write",
+    "format:scss": "prettier --write \"src/**/*.scss\""
+  },
+  "dependencies": {
+    "@gsap/react": "^2.1.2",
+    "gsap": "^3.15.0",
+    "lucide-react": "^1.17.0",
+    "next": "16.2.6",
+    "radix-ui": "^1.4.3",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "react-yandex-metrika": "^2.6.0",
+    "schema-dts": "^2.0.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.2.0",
+    "@svgr/webpack": "^8.1.0",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "prettier": "^3.8.3",
+    "sass": "^1.100.0",
+    "typescript": "^5"
+  }
+}
