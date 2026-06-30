@@ -1,0 +1,89 @@
+.footer {
+  border-top: none;
+  background: var(--color-text);
+  margin-top: 150px;
+
+  @media (max-width: $sm) {
+    margin-top: 100px;
+  }
+
+  &__inner {
+    padding: 64px 0 32px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    @media (max-width: $sm) {
+      flex-direction: column;
+      gap: 28px;
+    }
+  }
+
+  &__brand {
+    max-width: 360px;
+  }
+
+  &__logo {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+    margin-bottom: 14px;
+
+    span {
+      color: var(--color-primary);
+    }
+  }
+
+  &__tagline {
+    font-size: 15px;
+    color: #64748b;
+    margin: 0;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 32px;
+
+    @media (max-width: $sm) {
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+    color: #64748b;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding-top: 28px;
+
+    @media (max-width: $sm) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__copy,
+  &__disclaimer {
+    font-size: 14px;
+    color: #475569;
+  }
+}
