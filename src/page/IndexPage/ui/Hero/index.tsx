@@ -6,7 +6,7 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/SplitText";
 
-import { buildImagePath } from "@/shared/lib/products";
+import { buildImagePath } from "@/shared/lib/buildImagePath";
 import { useLanguage } from "@/shared/context/LanguageContext";
 
 import { FEATURED_PRODUCT, FLOAT_ANIM, FLOAT_PRODUCTS } from "./constants";
