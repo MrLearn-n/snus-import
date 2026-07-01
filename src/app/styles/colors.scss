@@ -1,42 +1,35 @@
 html {
-  // --color-red: #D7303A;
-  // --color-green: #4ac165;
-  // --color-yellow: #C7BD1C;
-
   --color-white: #ffffff;
-  --color-black: #141312;
-  --color-text-dark: #101010;
-  --color-off-white: #fafafb;
+  --color-black: #0f172a;
+  --color-text-dark: #111827;
+  --color-off-white: #f8fafc;
 
-  --color-gray: #ebebeb;
-  --color-light-gray: #f6f6f6;
-  --color-dark-gray: #9a9a9a;
-  --color-text-muted: #c3c3c3;
-  --color-text-dim: #c0c0c0;
-  --color-text-secondary: #c4c4c4;
-  --color-indicator: #d7d7d7;
+  --color-gray: #e5e7eb;
+  --color-light-gray: #f1f5f9;
+  --color-dark-gray: #6b7280;
+  --color-text-muted: #9ca3af;
+  --color-text-dim: #d1d5db;
+  --color-text-secondary: #374151;
+  --color-indicator: #e5e7eb;
 
-  --color-footer-muted: #a6a6a6;
+  --color-footer-muted: #94a3b8;
 
-  --color-surface-dark: #28272c;
-  --color-surface-darker: #1f1f1f;
-  --color-surface-mid: #575757;
+  --color-surface-dark: #f1f5f9;
+  --color-surface-darker: #e8edf5;
+  --color-surface-mid: #cbd5e1;
 
-  --color-primary: #c9a96e;
+  --color-primary: #4f46e5;
+  --color-primary-glow: rgba(79, 70, 229, 0.14);
+  --color-primary-subtle: rgba(79, 70, 229, 0.09);
+  --color-primary-border: rgba(79, 70, 229, 0.22);
 
-  --color-background: #141312;
-  --color-background-rgb: 20, 19, 18;
-  --color-text: #ffffff;
-  --color-block: #f6f6f6;
-  --color-border: #595550;
-  --color-border-dark: #2d2d2d;
+  --color-background: #ffffff;
+  --color-background-rgb: 255, 255, 255;
+  --color-text: #0f172a;
+  --color-block: #ffffff;
+  --color-border: #e5e7eb;
+  --color-border-dark: #f0f2f5;
 
-  --color-glass-bg: rgba(44, 44, 44, 0.5);
-  --color-glass-border: rgba(46, 46, 46, 0.5);
-
-  // --color-translucent-15-red: rgba(199, 62, 28, 0.15);
-  // --color-translucent-15-yellow: rgba(199, 188, 28, 0.15);
-  // --color-translucent-15-green: rgba(59, 208, 89, 0.15);
-  // --color-translucent-15-second-accent: rgba(20, 69, 61, 0.15);
-  // --color-translucent-15-accent: rgba(253, 13, 13, 0.10);
+  --color-glass-bg: rgba(255, 255, 255, 0.85);
+  --color-glass-border: rgba(79, 70, 229, 0.1);
 }

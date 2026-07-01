@@ -4,10 +4,10 @@ import type { Metadata } from "next";
 import IndexPage from "@/page/IndexPage";
 
 export const metadata: Metadata = (() => {
-  const title =
-    "template-next title";
-  const description = "template-next description";
-  const alt = "template-next";
+  const title = "SNUS IMPORT — каталог никотиновых паучей";
+  const description =
+    "Лучшие бренды никотиновых паучей в одном каталоге: разные крепости, десятки вкусов, фото, никотин и цена для каждой позиции.";
+  const alt = "SNUS IMPORT";
 
   return {
     title,
@@ -31,8 +31,9 @@ export const metadata: Metadata = (() => {
 const jsonLd: WithContext<Service> = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "template-next name",
-  description: "template-next description",
+  name: "SNUS IMPORT",
+  description:
+    "Каталог никотиновых паучей: бренды, линейки, крепости и вкусы в одном месте.",
   url: `${process.env.NEXT_PUBLIC_URL}/`,
 };
 

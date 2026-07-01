@@ -1,5 +1,15 @@
-
+import Hero from "./Hero";
+import About from "./About";
+import Metrics from "./Metrics";
+import Catalog from "./Catalog";
 
 export default function IndexPage() {
-  return "Main page";
+  return (
+    <>
+      <Hero />
+      <About />
+      <Metrics />
+      <Catalog />
+    </>
+  );
 }
