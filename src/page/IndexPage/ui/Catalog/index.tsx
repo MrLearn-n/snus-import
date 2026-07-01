@@ -5,7 +5,7 @@ import Image from "next/image";
 
 import { BRANDS, products } from "@/shared/lib/products";
 import { buildImagePath } from "@/shared/lib/buildImagePath";
-import { useLanguage } from "@/shared/context/LanguageContext";
+import { useLanguage } from "@/shared/hooks/useLanguage";
 
 import "./style.scss";
 

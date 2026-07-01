@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 
-import { useLanguage } from "@/shared/context/LanguageContext";
-import type { Lang } from "@/shared/lib/i18n";
+import { useLanguage } from "@/shared/hooks/useLanguage";
+import type { Lang } from "@/shared/lib/types";
 import BurgerMenu from "@/shared/ui/BurgerMenu";
 
 import "./style.scss";

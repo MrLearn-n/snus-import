@@ -8,3 +8,5 @@ export type Product = {
   folder: string;
   file: string;
 };
+
+export type Lang = "RU" | "BY";

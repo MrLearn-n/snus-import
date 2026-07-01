@@ -1,6 +1,6 @@
 "use client";
 
-import { useLanguage } from "@/shared/context/LanguageContext";
+import { useLanguage } from "@/shared/hooks/useLanguage";
 
 import {
   CHIP_BRANDS,
