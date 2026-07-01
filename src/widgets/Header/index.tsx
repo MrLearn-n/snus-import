@@ -24,7 +24,9 @@ export default function Header() {
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
 
-    return () => { document.body.style.overflow = ""; };
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [open]);
 
   const NAV_ITEMS = [
@@ -75,7 +77,7 @@ export default function Header() {
         </div>
       </header>
 
-      <BurgerMenu 
+      <BurgerMenu
         lang={lang}
         isOpen={open}
         onOpen={setOpen}

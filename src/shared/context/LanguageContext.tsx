@@ -1,6 +1,11 @@
 "use client";
 
-import { createContext, useState, useEffect, type PropsWithChildren } from "react";
+import {
+  createContext,
+  useState,
+  useEffect,
+  type PropsWithChildren,
+} from "react";
 
 import { translations, type Translations } from "@/shared/lib/i18n";
 import type { Lang } from "@/shared/lib/types";
@@ -27,9 +32,10 @@ export function LanguageProvider({ children }: PropsWithChildren) {
   };
 
   return (
-    <LanguageContext.Provider value={{ lang, setLang: handleSetLang, t: translations[lang] }}>
+    <LanguageContext.Provider
+      value={{ lang, setLang: handleSetLang, t: translations[lang] }}
+    >
       {children}
     </LanguageContext.Provider>
   );
 }
-

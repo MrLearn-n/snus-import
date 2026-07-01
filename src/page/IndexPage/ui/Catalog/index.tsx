@@ -59,7 +59,9 @@ export default function Catalog() {
                 <h3 className="catalog__card-name">{product.name}</h3>
 
                 <div className="catalog__card-meta">
-                  <span className="catalog__card-nicotine">{product.nicotine} мг</span>
+                  <span className="catalog__card-nicotine">
+                    {product.nicotine} мг
+                  </span>
                   <span className="catalog__card-price">{product.price} ₽</span>
                 </div>
               </div>

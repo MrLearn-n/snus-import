@@ -47,10 +47,18 @@ export default function AgeGate() {
             <p className="age-gate__text">{t.ageGate.text}</p>
 
             <div className="age-gate__actions">
-              <button type="button" className="age-gate__btn age-gate__btn--confirm" onClick={handleConfirm}>
+              <button
+                type="button"
+                className="age-gate__btn age-gate__btn--confirm"
+                onClick={handleConfirm}
+              >
                 {t.ageGate.confirm}
               </button>
-              <button type="button" className="age-gate__btn age-gate__btn--deny" onClick={handleDeny}>
+              <button
+                type="button"
+                className="age-gate__btn age-gate__btn--deny"
+                onClick={handleDeny}
+              >
                 {t.ageGate.deny}
               </button>
             </div>

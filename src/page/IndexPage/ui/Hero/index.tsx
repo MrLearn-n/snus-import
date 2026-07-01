@@ -15,15 +15,15 @@ import "./style.scss";
 
 export default function Hero() {
   const { t } = useLanguage();
-  
+
   const containerRef = useRef<HTMLElement>(null);
   const featuredRef = useRef<HTMLDivElement>(null);
-  
+
   const f1 = useRef<HTMLDivElement>(null);
   const f2 = useRef<HTMLDivElement>(null);
   const f3 = useRef<HTMLDivElement>(null);
   const f4 = useRef<HTMLDivElement>(null);
-  
+
   const floatRefs = [f1, f2, f3, f4];
 
   useGSAP(
@@ -37,21 +37,73 @@ export default function Hero() {
 
       const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
 
-      tl
-        .from(".hero__eyebrow", { x: -28, opacity: 0, duration: 0.6 })
-        .from(titleSplit.words, { y: 60, opacity: 0, duration: 0.75, stagger: 0.055, ease: "power3.out" }, "-=0.15")
-        .from(".hero__subtitle", { y: 20, opacity: 0, duration: 0.65 }, "-=0.35")
-        .from(".hero__cta", { y: 20, opacity: 0, duration: 0.55, ease: "back.out(1.8)" }, "-=0.4")
-        .from(featuredRef.current, { x: 60, opacity: 0, scale: 0.8, duration: 1.1, ease: "back.out(1.4)" }, 0)
-        .from(floatRefs.map((r) => r.current), { x: -55, opacity: 0, scale: 0.72, duration: 1.05, stagger: 0.14, ease: "back.out(1.15)" }, 0.25)
+      tl.from(".hero__eyebrow", { x: -28, opacity: 0, duration: 0.6 })
+        .from(
+          titleSplit.words,
+          {
+            y: 60,
+            opacity: 0,
+            duration: 0.75,
+            stagger: 0.055,
+            ease: "power3.out",
+          },
+          "-=0.15",
+        )
+        .from(
+          ".hero__subtitle",
+          { y: 20, opacity: 0, duration: 0.65 },
+          "-=0.35",
+        )
+        .from(
+          ".hero__cta",
+          { y: 20, opacity: 0, duration: 0.55, ease: "back.out(1.8)" },
+          "-=0.4",
+        )
+        .from(
+          featuredRef.current,
+          {
+            x: 60,
+            opacity: 0,
+            scale: 0.8,
+            duration: 1.1,
+            ease: "back.out(1.4)",
+          },
+          0,
+        )
+        .from(
+          floatRefs.map((r) => r.current),
+          {
+            x: -55,
+            opacity: 0,
+            scale: 0.72,
+            duration: 1.05,
+            stagger: 0.14,
+            ease: "back.out(1.15)",
+          },
+          0.25,
+        )
         .from(".hero__scroll", { opacity: 0, duration: 0.5 }, "-=0.25")
         .add(() => {
           if (featuredRef.current) {
-            gsap.to(featuredRef.current, { y: -28, duration: 3.6, delay: 0.2, repeat: -1, yoyo: true, ease: "sine.inOut" });
+            gsap.to(featuredRef.current, {
+              y: -28,
+              duration: 3.6,
+              delay: 0.2,
+              repeat: -1,
+              yoyo: true,
+              ease: "sine.inOut",
+            });
           }
           floatRefs.forEach((ref, i) => {
             if (!ref.current) return;
-            gsap.to(ref.current, { y: FLOAT_ANIM[i].y, duration: FLOAT_ANIM[i].duration, delay: FLOAT_ANIM[i].delay, repeat: -1, yoyo: true, ease: "sine.inOut" });
+            gsap.to(ref.current, {
+              y: FLOAT_ANIM[i].y,
+              duration: FLOAT_ANIM[i].duration,
+              delay: FLOAT_ANIM[i].delay,
+              repeat: -1,
+              yoyo: true,
+              ease: "sine.inOut",
+            });
           });
         });
 
@@ -90,7 +142,8 @@ export default function Hero() {
             <span className="hero__eyebrow">{t.hero.eyebrow}</span>
 
             <h1 className="hero__title">
-              {t.hero.titleLine1}<br />
+              {t.hero.titleLine1}
+              <br />
               {t.hero.titleLine2}
             </h1>
 
@@ -103,7 +156,10 @@ export default function Hero() {
 
           <div ref={featuredRef} className="hero__featured">
             <Image
-              src={buildImagePath(FEATURED_PRODUCT.folder, FEATURED_PRODUCT.file)}
+              src={buildImagePath(
+                FEATURED_PRODUCT.folder,
+                FEATURED_PRODUCT.file,
+              )}
               alt={FEATURED_PRODUCT.alt}
               fill
               sizes="(max-width: 567px) 0px, (max-width: 768px) 240px, 300px"
