@@ -43,47 +43,45 @@ export default function Header() {
             SNUS<span>IMPORT</span>
           </a>
 
-          <nav className="header__nav">
-            {NAV_ITEMS.map((link) => (
-              <a key={link.href} href={link.href} className="header__link">
-                {link.label}
-              </a>
-            ))}
-          </nav>
+          <div className="header__right">
+            <nav className="header__nav">
+              {NAV_ITEMS.map((link) => (
+                <a key={link.href} href={link.href} className="header__link">
+                  {link.label}
+                </a>
+              ))}
+            </nav>
 
-          <div className="header__lang">
-            {(["RU", "BY"] as Lang[]).map((l) => (
+            <div className="header__actions">
+              <div className="header__lang">
+                {(["RU", "BY"] as Lang[]).map((l) => (
+                  <button
+                    key={l}
+                    type="button"
+                    className={`header__lang-btn${lang === l ? " header__lang-btn--active" : ""}`}
+                    onClick={() => setLang(l)}
+                  >
+                    {l}
+                  </button>
+                ))}
+              </div>
+
               <button
-                key={l}
                 type="button"
-                className={`header__lang-btn${lang === l ? " header__lang-btn--active" : ""}`}
-                onClick={() => setLang(l)}
+                className={`header__burger ${open ? "header__burger--open" : ""}`}
+                onClick={() => setOpen((value) => !value)}
+                aria-label="Меню"
               >
-                {l}
+                <span />
+                <span />
+                <span />
               </button>
-            ))}
+            </div>
           </div>
-
-          <button
-            type="button"
-            className={`header__burger ${open ? "header__burger--open" : ""}`}
-            onClick={() => setOpen((value) => !value)}
-            aria-label="Меню"
-          >
-            <span />
-            <span />
-            <span />
-          </button>
         </div>
       </header>
 
-      <BurgerMenu
-        lang={lang}
-        isOpen={open}
-        onOpen={setOpen}
-        onLang={setLang}
-        items={NAV_ITEMS}
-      />
+      <BurgerMenu isOpen={open} onOpen={setOpen} items={NAV_ITEMS} />
     </>
   );
 }

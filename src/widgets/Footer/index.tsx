@@ -32,6 +32,8 @@ export default function Footer() {
           </nav>
         </div>
 
+        <p className="footer__notice">{t.footer.notice}</p>
+
         <div className="footer__bottom">
           <span className="footer__copy">
             © {year} SNUS IMPORT. {t.footer.rights}

@@ -61,7 +61,7 @@ export default function Metrics() {
             <span className="metrics__stat-label">{t.metrics.nicotine}</span>
           </div>
           <div className="metrics__stat">
-            <span className="metrics__stat-value">от {MIN_PRICE} ₽</span>
+            <span className="metrics__stat-value">{t.metrics.from} {MIN_PRICE} ₽</span>
             <span className="metrics__stat-label">{t.metrics.price}</span>
           </div>
         </div>

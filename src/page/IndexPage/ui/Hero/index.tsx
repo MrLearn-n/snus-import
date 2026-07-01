@@ -4,7 +4,6 @@ import { useRef } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
-import { SplitText } from "gsap/SplitText";
 
 import { buildImagePath } from "@/shared/lib/buildImagePath";
 import { useLanguage } from "@/shared/hooks/useLanguage";
@@ -33,20 +32,12 @@ export default function Hero() {
         gsap.set(ref.current, { rotation: FLOAT_ANIM[i].rotation });
       });
 
-      const titleSplit = new SplitText(".hero__title", { type: "words" });
-
       const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
 
       tl.from(".hero__eyebrow", { x: -28, opacity: 0, duration: 0.6 })
         .from(
-          titleSplit.words,
-          {
-            y: 60,
-            opacity: 0,
-            duration: 0.75,
-            stagger: 0.055,
-            ease: "power3.out",
-          },
+          ".hero__title",
+          { y: 60, opacity: 0, duration: 0.75, ease: "power3.out" },
           "-=0.15",
         )
         .from(
@@ -125,7 +116,6 @@ export default function Hero() {
         delay: 3.5,
       });
 
-      return () => titleSplit.revert();
     },
     { scope: containerRef },
   );
