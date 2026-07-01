@@ -1,6 +1,6 @@
 import type { Dispatch, SetStateAction } from "react";
 
-import type { Lang } from "@/shared/lib/i18n";
+import type { Lang } from "@/shared/lib/types";
 
 interface IProps {
   lang: Lang;
