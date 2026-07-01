@@ -1,5 +1,4 @@
 import localFont from "next/font/local";
-import { Montserrat } from "next/font/google";
 
 import GSAPWrapper from "@/app/providers/GSAPWrapper";
 import { LanguageProvider } from "@/shared/context/LanguageContext";
@@ -27,9 +26,9 @@ const inter = localFont({
   ],
 });
 
-const montserrat = Montserrat({
-  subsets: ["latin", "cyrillic"],
-  weight: ["500", "600", "700"],
+const montserrat = localFont({
+  src: "../src/shared/assets/fonts/Montserrat-SemiBold.ttf",
+  weight: "600",
   variable: "--font-montserrat",
 });
 
