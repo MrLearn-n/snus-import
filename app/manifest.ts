@@ -2,28 +2,32 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "template-next",
-    short_name: "template-next",
-    description: "template-next",
+    name: "SNUS IMPORT",
+    short_name: "SNUS IMPORT",
+    description:
+      "Каталог никотиновых паучей: бренды, линейки, крепости и вкусы в одном месте.",
     start_url: "/",
     display: "standalone",
-    background_color: "#fff",
-    theme_color: "#fff",
+    background_color: "#ffffff",
+    theme_color: "#4f46e5",
     icons: [
       {
         src: "/icons/icon.svg",
-        sizes: "128x128",
-        type: "image/svg",
-      },
-      {
-        src: "/icons/icon512.png",
-        sizes: "512x512",
-        type: "image/png",
+        sizes: "any",
+        type: "image/svg+xml",
+        purpose: "any",
       },
       {
         src: "/icons/icon192.png",
         sizes: "192x192",
         type: "image/png",
+        purpose: "maskable",
+      },
+      {
+        src: "/icons/icon512.png",
+        sizes: "512x512",
+        type: "image/png",
+        purpose: "maskable",
       },
     ],
   };
