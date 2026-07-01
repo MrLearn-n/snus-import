@@ -1,0 +1,85 @@
+.metrics {
+  &__brands {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 28px;
+  }
+
+  &__chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 16px;
+    border: 1px solid var(--color-border);
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text);
+    line-height: 1;
+
+    &--accent {
+      border-color: var(--color-primary-border);
+      color: var(--color-primary);
+    }
+
+    &--more {
+      border-style: dashed;
+      color: var(--color-dark-gray);
+    }
+  }
+
+  &__chip-icon {
+    font-size: 11px;
+    color: var(--color-primary);
+    line-height: 1;
+  }
+
+  &__divider {
+    height: 1px;
+    background: var(--color-border);
+    margin-bottom: 36px;
+  }
+
+  &__stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+
+    @media (max-width: $md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $xs) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__stat {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 24px 28px;
+    background: var(--color-off-white);
+    border: 1px solid var(--color-border);
+    border-radius: 18px;
+
+    @media (max-width: $sm) {
+      padding: 20px 22px;
+    }
+  }
+
+  &__stat-value {
+    font-size: clamp(24px, 2.6vw, 36px);
+    font-weight: 700;
+    color: var(--color-text);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  &__stat-label {
+    font-size: 13px;
+    color: var(--color-dark-gray);
+    line-height: 1.3;
+  }
+}
